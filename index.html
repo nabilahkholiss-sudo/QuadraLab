@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petualangan Kelinci 3D - Persamaan Kuadrat</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Three.js Library untuk Rendering 3D -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- MathJax untuk Render Rumus Matematika -->
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header Info -->
+        <div class="game-header">
+            <div class="info-box">Waktu: <span id="timer">10:00</span></div>
+            <div class="info-box">HP: <span id="hp">❤️❤️❤️</span></div>
+            <div class="info-box">Skor: <span id="score">0</span></div>
+            <div class="info-box">Posisi: <span id="question-count">1/10</span></div>
+        </div>
+
+        <!-- Canvas 3D Viewport -->
+        <div class="canvas-container" id="canvas3d-container">
+            <!-- Canvas Three.js di-generate via JavaScript -->
+        </div>
+
+        <!-- Panel Kuis Soal -->
+        <div class="quiz-container" id="quiz-box">
+            <h3 id="quiz-status-title">🚧 Gerbang 3D Terkunci! Jawab Soal Persamaan Kuadrat:</h3>
+            <h2 id="question-text">Memuat Soal...</h2>
+            <div class="options-grid" id="options-container"></div>
+            <div id="feedback" class="feedback-text"></div>
+        </div>
+
+        <!-- Overlay Layar Mulai / Game Over / Win -->
+        <div id="overlay" class="overlay">
+            <div class="overlay-content">
+                <h1 id="overlay-title">Petualangan Kelinci 3D</h1>
+                <p id="overlay-message">Bantu kelinci 3D menjelajahi dunia labirin dengan menjawab 10 soal persamaan kuadrat dalam waktu 10 menit!</p>
+                <button id="start-btn" onclick="startGame()">Mulai Permainan</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

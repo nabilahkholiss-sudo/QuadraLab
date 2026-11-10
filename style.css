@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a252f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    width: 850px;
+    background: #2c3e50;
+    border-radius: 15px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.6);
+    padding: 20px;
+    position: relative;
+    color: white;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.info-box {
+    background: #34495e;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    border: 1px solid #455a64;
+}
+
+.canvas-container {
+    width: 100%;
+    height: 320px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 4px solid #f39c12;
+    margin-bottom: 15px;
+    background: #87ceeb;
+    position: relative;
+}
+
+.canvas-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+
+.quiz-container {
+    background: #ecf0f1;
+    color: #2c3e50;
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#quiz-status-title {
+    font-size: 0.95rem;
+    color: #e67e22;
+    margin-bottom: 6px;
+}
+
+#question-text {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.option-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.option-btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.feedback-text {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.05rem;
+    height: 25px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.88);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.overlay-content {
+    background: #ffffff;
+    color: #2c3e50;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 500px;
+}
+
+.overlay-content h1 {
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+.overlay-content p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#start-btn {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#start-btn:hover {
+    background: #219150;
+}
